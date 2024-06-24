@@ -1,0 +1,4 @@
+- name : Rol setup_scripts
+  hosts: all
+  roles:
+    - setup_scripts
