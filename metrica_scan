@@ -1,0 +1,50 @@
+pg_pi_cientifico_bbdd_scan:
+  query: 
+    WITH latest_dates AS (
+        SELECT
+        table_name,
+        MAX(fecha) AS max_fecha
+    FROM
+        cientifico_metrics_scan
+    GROUP BY
+        table_name
+    )
+    SELECT
+        a.id,
+        a.datname,
+        a.schema_name,
+        a.table_name,
+        a.seq_scan,
+        a.idx_scan,
+        a.porcentaje_idx_usado,
+        a.filas_en_tabla
+    FROM
+        cientifico_metrics_scan a
+    JOIN
+        latest_dates ld
+    ON
+        a.table_name = ld.table_name
+        AND a.fecha = ld.max_fecha;
+
+  metrics:
+    - datname:
+        usage: "LABEL"
+        description: "Base de datos"
+    - schema_name:
+        usage: "LABEL"
+        description: "Esquema"
+    - table_name:
+        usage: "LABEL"
+        description: "Tabla"
+    - seq_scan:
+        usage: "COUNTER"
+        description: "seq scan"
+    - idx_scan:
+        usage: "COUNTER"
+        description: "idx scan"
+    - porcentaje_idx_usado:
+        usage: "COUNTER"
+        description: "porcentaje de uso del indice"     
+    - filas_en_tabla:
+        usage: "COUNTER"
+        description: "filas en la tabla"
