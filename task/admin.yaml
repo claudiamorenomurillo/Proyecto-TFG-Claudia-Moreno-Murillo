@@ -1,7 +1,0 @@
-- name: Copy the scripts admin to /opt/postgres/admin
-  template: src={{ item }} dest=/opt/postgres/admin/{{ item.split('/')[-1] |replace('.template', '')}} owner=postgres group=postgres mode=0700
-  with_items: "{{ lookup('pipe', 'find '+ ansible_search_path[0] + '/templates/admin/' +'* -type f').split('\n') }}"
-  become: yes
-  become_user: postgres
-  tags:
-    - scripts
