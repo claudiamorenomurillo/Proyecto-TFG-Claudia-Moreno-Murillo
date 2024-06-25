@@ -13,3 +13,6 @@ WantedBy=timers.target
 Description=Mantenimiento diario de PostgreSQL
 [Service]
 ExecStart=/opt/postgres/admin/mantenimiento.sh
+
+Para habilitar y comprbar si está funcionando:
+(sudo) systemctl start/enable mantenimiento_postgres.timer
