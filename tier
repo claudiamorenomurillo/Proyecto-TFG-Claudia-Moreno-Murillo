@@ -1,0 +1,51 @@
+[cm:children]
+cm_t1
+cm_t2
+cm_t3
+cm_t4
+
+#>>>>>> AGRUPACIÓN POR TIER
+#>>>>>> T1
+[cm_t1:children]
+cm_cluster29
+cm_cluster36
+cm_cluster50
+cm_cluster01
+cm_cluster39
+cm_cluster30
+cm_cluster28
+cm_cluster26
+cm_cluster27
+cm_cluster23
+cm_cluster24
+cm_cluster22
+cm_cluster21
+cm_cluster18
+cm_cluster20
+cm_cluster02
+cm_cluster03
+cm_cluster04
+cm_cluster05
+cm_cluster06
+cm_cluster08
+cm_cluster09
+cm_cluster10
+cm_cluster11
+cm_cluster13
+cm_cluster14
+cm_cluster15
+cm_cluster16
+cm_cluster17
+
+#>>>>>> T2
+[cm_t2:children]
+cm_cluster19
+cm_cluster12
+
+#>>>>>> T3
+[cm_t3:children]
+cm_cluster25
+
+#>>>>>> T4
+[cm_t4:children]
+cm_cluster07
