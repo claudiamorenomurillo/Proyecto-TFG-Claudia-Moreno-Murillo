@@ -1,0 +1,15 @@
+[Unit]
+Description=Script de mantenimiento diario de PostgreSQL
+
+[Timer]
+OnCalendar=*-*-* 04:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target
+
+
+[Unit]
+Description=Mantenimiento diario de PostgreSQL
+[Service]
+ExecStart=/opt/postgres/admin/mantenimiento.sh
