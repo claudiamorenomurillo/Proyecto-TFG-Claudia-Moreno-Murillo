@@ -1,0 +1,3 @@
+- name: Include the setup_admin_scripts.yml
+  include_tasks: setup_scripts_admin.yml
+  tags: scripts
