@@ -1,0 +1,4 @@
+pg_cluster_name: "mdona-cpdm-{{ env }}-{{ cluster_name }}"
+cm_group_postgres: "cm_postgres_{{ cluster_name }}"
+cm_group_cluster: "cm_{{ cluster_name }}"
+cm_group_pgpool: "cm_pgpool_{{ cluster_name }}"
